@@ -1,32 +1,59 @@
+/* Estilo general */
 body {
-    text-align: center;
-    font-family: Arial, sans-serif;
-    background-color: #fbe8a6;
     margin: 0;
-    padding: 20px;
-  }
-  h1 {
-    color: #d35400;
-  }
-  img {
-    width: 200px;
-    cursor: pointer;
-    transition: transform 0.2s;
-  }
-  img:hover {
-    transform: scale(1.1);
-  }
-  #message {
-    display: none;
-    font-size: 20px;
-    color: #2c3e50;
-    margin-top: 20px;
-  }
-
-  @keyframes crack {
-    0% { transform: scale(1); opacity: 1; }
-    100% { transform: scale(0); opacity: 0; }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #ff0400;
 }
-img:active {
-    animation: crack 0.5s forwards;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+h1 {
+    color: #ffd500;
+    font-size: 2em; /* Tamaño de fuente más grande */
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.cookie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 300px;
+    height: 300px; /* Aumenta el tamaño para mayor visibilidad */
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+}
+
+svg {
+    width: 100%; /* Escala SVG al contenedor */
+    height: 100%;
+}
+
+.left, .right {
+    transition: transform 1s ease;
+}
+
+.paper {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+#fortuneText {
+    font-size: 0.98em; /* Mensaje más grande */
+    fill: #000000;
+    font-weight: bold;
 }
