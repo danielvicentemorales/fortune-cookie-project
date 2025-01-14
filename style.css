@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #fbe8a6;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    color: #d35400;
+  }
+  img {
+    width: 200px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  img:hover {
+    transform: scale(1.1);
+  }
+  #message {
+    display: none;
+    font-size: 20px;
+    color: #2c3e50;
+    margin-top: 20px;
+  }
+
+  @keyframes crack {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(0); opacity: 0; }
+}
+img:active {
+    animation: crack 0.5s forwards;
+}
